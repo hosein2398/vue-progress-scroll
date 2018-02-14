@@ -17,16 +17,17 @@
       }
     },
     mounted() {
+
       // we get nextTick so  that we are sure that DOM is fully loaded 
       this.$nextTick(function() {
         var theElement = document.getElementsByClassName('p-wrapper')[0];
         // getting height of element
         var height = theElement.getBoundingClientRect().height;  
         // attaching a EventListener for scrolling    
+        
         window.addEventListener('scroll', () => {
           var top = theElement.getBoundingClientRect().top - (window.innerHeight / 2);
           var calculatedValue = Math.abs(top) / height * 100;
-          console.log(calculatedValue)
           if (top  < 0) {
             this.style = 'width:' + calculatedValue + '%';
           } else {
