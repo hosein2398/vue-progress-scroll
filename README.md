@@ -1,5 +1,5 @@
 
-# progress-scroll
+# vue-progress-scroll
 
 > Vue tiny plugin to show a progress bar while user is reading an article or ... 
 
@@ -12,9 +12,9 @@ And use this inside your app:
 ``` js
 import Vue from 'vue'
 import App from './App.vue'
-import Textra from 'vue-textra'
+import Progress from 'vue-progress-scroll'
 
-Vue.use(Textra);
+Vue.use(Progress);
 new Vue({
   el: '#app',
   render: h => h(App)
