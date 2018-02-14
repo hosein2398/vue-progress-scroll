@@ -21,3 +21,20 @@ new Vue({
 })
 ```
 
+And if you want to use from browser, simply :
+```js
+<script src='./vue-progress-scroll.js'></script>
+```
+## Usage
+Usage is really simple, just put the content inside `progress-scroll` tag.
+
+Example:
+```
+<progress-scroll>
+	Here is the article main part.
+	lorem...
+	....
+	...
+	..
+</<progress-scroll>
+```
