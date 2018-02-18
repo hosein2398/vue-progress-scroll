@@ -29,12 +29,24 @@ And if you want to use from browser, simply :
 Usage is really simple, just put the content inside `progress-scroll` tag.
 
 Example:
-```
+```html
 <progress-scroll>
 	Here is the article main part.
 	lorem...
 	....
 	...
 	..
-</<progress-scroll>
+</progress-scroll>
+```
+
+## Events
+vue-progress-scroll fires `complete` event when you reach end of scroll. Example:
+```html
+<progress-scroll @complete='runMyMethod'>
+	Here is the article main part.
+	lorem...
+	....
+	...
+	..
+</progress-scroll>
 ```
