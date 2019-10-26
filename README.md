@@ -1,7 +1,7 @@
 
 # vue-progress-scroll
 
-> Vue tiny plugin to show a progress bar while user is reading an article or ... 
+> Tiny Vue plugin to show a progress bar while user is reading an article or ... 
 
 ## Installing 
 Get from npm:
