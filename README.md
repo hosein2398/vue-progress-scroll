@@ -50,3 +50,14 @@ vue-progress-scroll fires `complete` event when you reach end of scroll. Example
 	..
 </progress-scroll>
 ```
+## Props
+There is a `background` prop which defines the background color of bar:
+```html
+<progress-scroll background='#abfbc6'>
+	Here is the article main part.
+	lorem...
+	....
+	...
+	..
+</progress-scroll>
+```

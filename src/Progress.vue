@@ -11,33 +11,33 @@
 <script>
   export default {
     name: 'vue-progress-scroll',
+    props: ['background'],
     data() {
       return {
         style: null
       }
     },
     mounted() {
-
+      
       // we get nextTick so  that we are sure that DOM is fully loaded 
       this.$nextTick(function() {
         var theElement = document.getElementsByClassName('p-wrapper')[0];
-        // getting height of element
-        var height = theElement.getBoundingClientRect().height;  
-        // attaching a EventListener for scrolling    
-        
-        window.addEventListener('scroll', () => {
+        var backColor = this.background || 'rgb(245, 107, 107)'
+        function calc(){
           var top = theElement.getBoundingClientRect().top - (window.innerHeight / 2);
+          var height = theElement.getBoundingClientRect().height; 
           var calculatedValue = Math.abs(top) / height * 100;
           if (top  < 0) {
-            this.style = 'width:' + calculatedValue + '%';
+            this.style = 'width:' + calculatedValue + '%; background:' + backColor;
           } else {
             this.style = 'width:0';
           }
           if (calculatedValue >= 100) {
             this.$emit('complete')
           }
-          
-        }); // scroll
+        }
+        window.addEventListener('scroll', calc.bind(this)); // scroll
+        window.addEventListener('resize', calc.bind(this)); // resize
 
       }); // nextTick
   
@@ -52,7 +52,6 @@
     left: 0;
     width: 0;
     height: 5px;
-    background: rgb(245, 107, 107);
-    box-shadow: 0px 2px 5px 0px rgb(240, 156, 123)
+    box-shadow: 0 2px 5px 0 #828282;
   }
 </style>

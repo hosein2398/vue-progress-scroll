@@ -1,7 +1,7 @@
 {
   "name": "vue-progress-scroll",
-  "description": "A Vue.js prugin that adds progress line on top of the page",
-  "version": "1.0.0",
+  "description": "A Vue.js prugin that adds progress bar on top of the page",
+  "version": "1.1.0",
   "author": "hosein <hosein2398@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -18,9 +18,6 @@
     "vue-plugin"
   ],
   "main": "src/main.js",
-  "dependencies": {
-    "vue": "^2.5.11"
-  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
